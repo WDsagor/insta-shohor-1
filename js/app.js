@@ -51,11 +51,7 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
-<<<<<<< HEAD
-    const image = post;
-=======
     const image = post.image;
->>>>>>> aceda7fd573af3316c8250b33474da05e1910008
     const div = document.createElement( "article" );
     div.classList.add( "post" );
     div.innerHTML = `
@@ -66,11 +62,7 @@ const createPost = (post) => {
                     target="_blank"
                     class="post__avatar"
                   >
-<<<<<<< HEAD
-                    <img src="${image.userImage}" alt="User Picture" />
-=======
                     <img src="${image}" alt="User Picture" />
->>>>>>> aceda7fd573af3316c8250b33474da05e1910008
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
@@ -84,11 +76,7 @@ const createPost = (post) => {
                 <div class="post__medias">
                   <img
                     class="post__media"
-<<<<<<< HEAD
-                    src="${image.image}"
-=======
                     src="${image}"
->>>>>>> aceda7fd573af3316c8250b33474da05e1910008
                     alt="Post Content"
                   />
                 </div>
