@@ -18,12 +18,16 @@ const isLiked = (id) => {
 const addToLiked = (id) => {
     likedPostsId.push(id); 
     showPosts(posts);
+    document.getElementById( "liked" ).innerHTML="";
+    displayLikedPosts();
 };
 
 const reportPost = (id) => {
     reportedPostsId.push(id);
     const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
     showPosts(remainingPosts);
+    document.getElementById( "reported" ).innerHTML="";
+    displayReportedPosts();
 };
 
 const displayContent = (text) => {
@@ -41,13 +45,13 @@ const switchTab = (id) => {
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
 
-        displayLikedPosts();
+        
     } else {
         document.getElementById( "reported" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "liked" ).style.display = "none";
 
-        displayReportedPosts();
+      
     }
 };
 
